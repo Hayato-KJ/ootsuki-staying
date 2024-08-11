@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOTSUKI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">OOTSUKI</div>
+    <nav>
+        <ul>
+            <li><a href="#">Plan</a></li>
+            <li><a href="#">story</a></li>
+            <li><a href="#">people</a></li>
+            <li><a href="#">option</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">access</a></li>
+            <li><a href="#">reservation</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TextTextTextText</h1>
+            <p>texttexttexttext</p>
+        </div>
+    </section>
+    <div class="container">
+        <section class="accommodation-types">
+            <div class="accommodation-item">
+                <h2>Type A</h2>
+                <img src="https://cdn.pixabay.com/photo/2019/05/24/11/00/interior-4226020_960_720.jpg"
+                     alt="MAOIQ interior">
+                <button class="more-btn" data-image="img/typeA.png">more</button>
+            </div>
+            <div class="accommodation-item">
+                <h2>Type B</h2>
+                <img src="https://cdn.pixabay.com/photo/2021/11/28/11/54/bed-6830011_1280.jpg"
+                     alt="MAOIQ komfort interior">
+                <button class="more-btn" data-image="img/typeB.png">more</button>
+            </div>
+        </section>
+        <section>
+            <div id="story" class="section content-section">
+                <div class="image-wrapper">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/22/01/38/hit-1407826_1280.jpg" alt="MAOIQ exterior">
+                </div>
+                <div class="text-content">
+                    <h2>story</h2>
+                    <p>こちらは"東海大学硬式野球部寮三寮"でございます<br>
+                        平素よりご利用いただき、心より感謝申し上げます<br>
+                        日頃より同じ心をもって野球に取り組んでいる部員の皆様を<br>
+                        より一層応援したい気持ちから<br>
+                        当寮内に"ゲストハウス"を開設することにいたしました<br>
+                        日々応援していらっしゃる父兄の方々に・・・<br>
+                        また、部員を支え、熱意をもってご指導にあたっていらっしゃる<br>
+                        コーチングスタッフ・関係スタッフの方々や、その関係者の方々・・・<br>
+                        グラウンドにほど近いこちらの宿泊施設を<br>
+                        お気軽にご利用・ご活用いただければ幸いです</p>
+                    <button class="more-btn">more</button>
+                </div>
+            </div>
+            <div id="people" class="section content-section">
+                <div class="text-content">
+                    <h2>people</h2>
+                    <p>テキストテキストテキストテキストテキスト。<br>
+                        テキストテキストテキストテキスト。<br>
+                        テキストテキストテキストテキストテキストテキスト。<br>
+                        テキストテキストテキスト。<br>
+                        テキストテキストテキストテキストテキスト。</p>
+                    <button class="more-btn">more</button>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://cdn.pixabay.com/photo/2023/10/29/13/21/waterfall-8350178_1280.jpg"
+                         alt="MAOIQ staff">
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="access" class="map-section container">
+        <div class="container">
+            <div class="map-content">
+                <div class="map-wrapper">
+                    <!-- Google Mapsの埋め込みコードをここに挿入 -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6507.561051098368!2d139.26439040000002!3d35.36109270000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a96cceea2d8b%3A0xa0a6fda2605e1d41!2z44CSMjU3LTAwMDQg56We5aWI5bed55yM56em6YeO5biC5LiL5aSn5qe777yS77yT77yU4oiS77yS!5e0!3m2!1sja!2sjp!4v1723364265752!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-info">
+                    <h2>access</h2>
+                    <p>〒257-0004 神奈川県秦野市下大槻234-2</p>
+                    <p>〇〇から車で25分</p>
+                    <p>〇〇から電車で1時間</p>
+                    <a href="https://maps.app.goo.gl/tpie6ptnTeaPcuTHA" target="_blank" rel="noopener noreferrer">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- モーダル要素 -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <h3>Plan <span class="leaf-icon">☘️</span></h3>
+            <img id="modalImage" src="" alt="Modal Image">
+        </div>
+    </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

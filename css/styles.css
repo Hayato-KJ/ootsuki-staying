@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #554e35;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(85, 78, 53, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #554e35;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #554e35;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #554e3588;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #554e35;
+    margin: 5px 0;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.hero {
+    height: calc(100vh - 80px);
+    background-image: url('https://images.unsplash.com/photo-1521914271965-8508b724e46b?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1600px; /* コンテンツの最大幅を設定 */
+    margin: 0 auto; /* 中央揃え */
+    padding: 0 10%; /* 左右に10%のパディングを追加 */
+}
+
+.accommodation-types {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10%;
+}
+
+.accommodation-item {
+    width: 48%;
+    text-align: center;
+}
+
+.accommodation-item h2 {
+    font-size: 24px;
+    color: #554e35;
+    margin-bottom: 20px;
+}
+
+.accommodation-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content-section {
+    display: flex;
+    padding: 50px 10%;
+    align-items: center;
+    gap: 40px;
+}
+
+#story, #people {
+    flex-direction: row;
+}
+
+.image-wrapper, .text-content {
+    flex: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    color: #554e35;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #554e35;
+}
+
+.more-btn {
+    background-color: transparent;
+    border: 1px solid #554e35;
+    color: #554e35;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #554e35;
+    color: #ffffff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: auto;
+    opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    background-color: rgba(85, 78, 53, 0.5);
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal-content h3 {
+    color: #554e35;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.leaf-icon {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #554e35;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.map-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.map-content {
+    display: flex;
+    padding: 50px 10%;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.map-wrapper {
+    flex: 2;
+    height: 450px;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.map-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.map-info h2 {
+    font-size: 24px;
+    color: #554e35;
+    margin-bottom: 20px;
+}
+
+.map-info p {
+    margin-bottom: 10px;
+}
+
+.map-info a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #554e35;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .map-content {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    .map-wrapper, .map-info {
+        width: 100%;
+    }
+
+    .map-wrapper {
+        height: 300px; /* モバイルでの地図の高さを調整 */
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        padding: 0 5%; /* モバイル表示時は余白を少し狭める */
+    }
+
+    .accommodation-types, .content-section {
+        padding: 50px 5%; /* モバイル表示時は余白を少し狭める */
+        flex-direction: column;
+    }
+
+    .accommodation-item, .image-wrapper, .text-content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #story, #people {
+        flex-direction: column;
+    }
+}
